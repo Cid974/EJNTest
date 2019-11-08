@@ -1,0 +1,13 @@
+.Standing {
+  background-color: #41444c;
+  border-radius: 10px;
+  display: table-cell;
+}
+
+.standingBar {
+  text-align: center;
+  width: 100%;
+  color: #171819;
+  font-size: calc(20px + 2vmin);
+  margin: 10px 0 10px 0;
+}

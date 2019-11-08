@@ -1,0 +1,29 @@
+.participantContainer {
+  display: flex;
+}
+
+.participant {
+  display: flex;
+  background-color: #2e2f32;
+}
+
+.seed {
+  width: 3vmin;
+  text-align: center;
+  margin: 5px 0px 5px 10px;
+}
+
+.fighter {
+  width: 10vmin;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 5px 15px 5px 5px;
+}
+
+.result {
+  width: 2vmin;
+  text-align: center;
+  padding: 5px;
+}

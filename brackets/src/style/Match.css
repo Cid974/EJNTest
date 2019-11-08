@@ -1,0 +1,26 @@
+.Match {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: normal;
+  margin: auto;
+  padding: 2vmin;
+}
+
+.matchNbr {
+  width: 4vmin;
+  line-height: 50px;
+  text-align: center;
+  color: #4a4548;
+}
+
+.participant1 {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.participant2 {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
