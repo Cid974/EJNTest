@@ -14,10 +14,10 @@ Winner highlight: YES
 
 ## How to start the project
 
-From 'brackets' directory, run 'npm install'
+Navigate to `brackets` directory, then run `npm install`
 
-Move the JSON file with the data to brackets/src
+Move the JSON file with the data to `brackets/src`
 
-In App.js, change the line 'import data from './InterviewData.js' according to the json file you just moved
+In App.js, change the line `import data from './InterviewData.js` to match the name of the json file you just moved
 
-Run npm start
+Run `npm start`
