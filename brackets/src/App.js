@@ -17,13 +17,11 @@ function getRounds(data) {
 function separateRounds(data, nbrRounds) {
 
   let i = 0;
-  let round = 1;
   let splitRound = [];
 
-  while(round <= nbrRounds) {
+  for(let round = 1; round <= nbrRounds; round++) {
     splitRound[i] = data.match.filter((match) => match.id.r === round);
     i++;
-    round++;
   }
 
   return splitRound;
@@ -37,10 +35,10 @@ class App extends React.Component {
       playerHovered: 0
     }
 
-    this.handlePlayerChange = this.handlePlayerChange.bind(this);
+    this.handleHoverPlayer = this.handleHoverPlayer.bind(this);
   }
 
-  handlePlayerChange(id){
+  handleHoverPlayer(id){
     this.setState({playerHovered: id})
   }
 
@@ -57,22 +55,22 @@ class App extends React.Component {
           <p className="Subtitle">
             Stage 1 - Pool 1
           </p>
-          <div style={{flexGrow: '1', padding: '2vmin'}}>
-            <table style={{height: '10%', width: '100%', tableLayout: 'fixed'}}>
+          <div className="standingContainer">
+            <table className="standingTable" style={{height: '10%'}}>
               <tbody>
-                <tr style={{height: '10%'}}>
+                <tr>
                   <StandingBar
                     maxRound={maxRound}
                   />
                 </tr>
               </tbody>
             </table>
-            <div style={{paddingTop: '4vmin'}}>
-            <table style={{height: '90%', width: '100%', tableLayout: 'fixed'}}>
+            <div className="roundContainer">
+            <table className="roundTable" style={{height: '90%'}}>
               <tbody>
                 <tr>
                   {roundsSplit.map((item, index) => <Round
-                                                      onPlayerChange={this.handlePlayerChange}
+                                                      onHoverPlayer={this.handleHoverPlayer}
                                                       playerSelect={this.state.playerHovered}
                                                       key={index}
                                                       roundNbr={index}

@@ -13,13 +13,13 @@ class StandingBar extends React.Component{
 
     for (var i = 0; i < rounds.length; i++) {
       if (rounds.length - i === 1){
-        rounds[i] = <div key={i} className="standingBar">{`Finals`}</div>
+        rounds[i] = <div key={i} className="standingTitle">{`Finals`}</div>
       } else if (rounds.length - i === 2){
-        rounds[i] = <div key={i} className="standingBar">{`Semifinals`}</div>
+        rounds[i] = <div key={i} className="standingTitle">{`Semifinals`}</div>
       } else if (rounds.length - i === 3){
-        rounds[i] = <div key={i} className="standingBar">{`Quarterfinals`}</div>
+        rounds[i] = <div key={i} className="standingTitle">{`Quarterfinals`}</div>
       } else {
-        rounds[i] = <div key={i} className="standingBar">{`Round ${i+1}`}</div>
+        rounds[i] = <div key={i} className="standingTitle">{`Round ${i+1}`}</div>
       }
     }
 
@@ -32,7 +32,7 @@ class StandingBar extends React.Component{
 
     return(
       <td className="Standing">
-        <div style={{display: 'flex'}}>
+        <div className="standingBar">
           {rounds.map(item => item)}
         </div>
       </td>

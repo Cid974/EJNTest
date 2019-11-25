@@ -1,3 +1,12 @@
+table, td, th {
+  border-collapse: collapse;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+}
+
 .Bracket {
   text-align: left;
   background-color: #171819;
@@ -6,10 +15,6 @@
   min-height: 100vh;
   height: 100%;
   width: 100%;
-}
-
-table, td, th {
-  border-collapse: collapse;
 }
 
 .Title {
@@ -26,12 +31,19 @@ table, td, th {
   padding: 0 2vmin 0 2vmin;
 }
 
-.bracketDisplay {
+.standingContainer {
   flex-grow: 1;
+  padding: 2vmin;
 }
 
-.roundDisplay {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
+.standingTable {
+  height: 10%;
+}
+
+.roundContainer {
+  padding-top: 4vmin;
+}
+
+.roundTable {
+  height: 90%;
 }

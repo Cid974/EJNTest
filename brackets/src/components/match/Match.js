@@ -15,7 +15,7 @@ class Match extends React.Component {
   }
 
   handleHoverPlayer(id){
-    this.props.onPlayerSelect(id);
+    this.props.onHoverPlayer(id);
     this.setState({player: id});
   }
 
@@ -36,7 +36,7 @@ class Match extends React.Component {
 
 
     return (
-        <div className="Match" ref={this.matchRef}>
+        <div className="Match">
           <div className="matchNbr">
             {nbrMatch}
           </div>

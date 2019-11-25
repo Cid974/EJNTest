@@ -5,6 +5,10 @@
 }
 
 .standingBar {
+  display: flex;
+}
+
+.standingTitle {
   text-align: center;
   width: 100%;
   color: #171819;

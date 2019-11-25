@@ -10,11 +10,11 @@ class Round extends React.Component {
       playerHovered: 0,
     }
 
-    this.selectPlayer = this.selectPlayer.bind(this)
+    this.handleHoverPlayer = this.handleHoverPlayer.bind(this)
   }
 
-  selectPlayer(id){
-    this.props.onPlayerChange(id);
+  handleHoverPlayer(id){
+    this.props.onHoverPlayer(id);
     this.setState({playerHovered: id})
   }
 
@@ -24,14 +24,14 @@ class Round extends React.Component {
 
     return(
       <td className="Rounds">
-        <div style={{height: 'auto'}}>
+        <div className="matchContainer">
           {this.props.matches.map((item, index) => <Match
                                   key={index}
                                   number={item.number}
                                   seed={item.seed}
                                   participant={item.participant}
                                   score={item.score}
-                                  onPlayerSelect={this.selectPlayer}
+                                  onHoverPlayer={this.handleHoverPlayer}
                                   hoveredPlayer={this.props.playerSelect}
                                   isFinal={final}
                                 />)}
